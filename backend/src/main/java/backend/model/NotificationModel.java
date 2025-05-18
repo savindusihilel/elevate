@@ -39,19 +39,19 @@ public class NotificationModel {
     public String getUserId() {
         return userId;
     }
-
+  // Setter for user ID
     public void setUserId(String userId) {
         this.userId = userId;
     }
-
+    // Getter for notification message
     public String getMessage() {
         return message;
     }
-
+  // Setter for notification message
     public void setMessage(String message) {
         this.message = message;
     }
-
+// Getter to check if the notification is read
     public boolean isRead() {
         return read;
     }
