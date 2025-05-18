@@ -62,6 +62,8 @@ function AddLearningProgress() {
       console.error('Error:', error);
     }
   };
+
+  //handle add skill
   const handleAddSkill = () => {
     if (skills.includes('')) {
       alert('Please fill the current skill before adding a new one.');
