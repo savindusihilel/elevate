@@ -55,6 +55,7 @@ public class LearningProgressController {
         learningProgressRepository.deleteById(id);
     }
 
+    // learning progress filter
     @PostMapping("/learningProgress/filterBySkills")
     public List<LearningProgressModel> getProgressBySkills(@RequestBody List<String> skills) {
         return learningProgressRepository.findAll().stream()
