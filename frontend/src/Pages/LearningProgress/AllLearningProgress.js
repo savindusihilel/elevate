@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FaUserCircle, FaPen } from "react-icons/fa";
 import './LearningPro.css';
 import NavBar from '../../Components/NavBar/NavBar'
+
+//function that handles all learning progress
 function AllLearningProgress() {
   const [progressData, setProgressData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -71,3 +73,6 @@ function AllLearningProgress() {
 }
 
 export default AllLearningProgress;
+
+
+//AllLearningProgres

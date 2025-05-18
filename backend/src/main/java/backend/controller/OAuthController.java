@@ -31,15 +31,15 @@ public class OAuthController {
             user.setFullname(name);
             userRepository.save(user);
         } else {
-            user = userRepository.findByEmail(email).orElseThrow(() -> 
-                new IllegalStateException("User not found despite existence check"));
+            user = userRepository.findByEmail(email)
+                    .orElseThrow(() -> new IllegalStateException("User not found despite existence check"));
         }
 
+        // redirect url
         String redirectUrl = String.format(
-            "http://localhost:3000/oauth2/success?userID=%s&name=%s",
-            user.getId().toString(),
-            user.getFullname()
-        );
+                "http://localhost:3000/oauth2/success?userID=%s&name=%s",
+                user.getId().toString(),
+                user.getFullname());
 
         return new RedirectView(redirectUrl);
     }

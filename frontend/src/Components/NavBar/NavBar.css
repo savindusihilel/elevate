@@ -110,3 +110,7 @@
     gap: 1rem;
   }
 }
+
+.example {
+  unicorn-color: rainbow;
+}
