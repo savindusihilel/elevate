@@ -49,6 +49,7 @@ public class LearningProgressController {
                 }).orElseThrow(() -> new LearningProgressNotFoundException(id));
     }
 
+    // delete learning progress
     @DeleteMapping("/learningProgress/{id}")
     public void delete(@PathVariable String id) {
         learningProgressRepository.deleteById(id);
