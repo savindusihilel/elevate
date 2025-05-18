@@ -20,6 +20,8 @@ function AddNewPost() {
     let videoCount = 0;
     const previews = [];
 
+    // Add media 
+
     for (const file of files) {
       if (file.size > maxFileSize) {
         alert(`File ${file.name} exceeds the maximum size of 50MB.`);
