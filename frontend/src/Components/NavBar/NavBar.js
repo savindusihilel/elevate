@@ -49,3 +49,5 @@ function NavBar() {
 }
 
 export default NavBar;
+
+//This is the NavBar code developed in javascrpit
