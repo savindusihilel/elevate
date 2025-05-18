@@ -67,4 +67,4 @@ public class NotificationModel {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
-}
+
