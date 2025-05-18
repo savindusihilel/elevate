@@ -25,7 +25,7 @@ public class NotificationController {
     public List<NotificationModel> getNotifications(@PathVariable String userId) {
         return notificationRepository.findByUserId(userId);
     }
-
+//put marked notification as read
     @PutMapping("/{id}/markAsRead")
     public ResponseEntity<?> markAsRead(@PathVariable String id) {
         return notificationRepository.findById(id).map(notification -> {
