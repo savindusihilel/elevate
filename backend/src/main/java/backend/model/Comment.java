@@ -6,10 +6,12 @@ public class Comment {
     private String userFullName;
     private String content;
 
+    //// Getter for comment ID
     public String getId() {
         return id;
     }
 
+     // Setter for comment ID
     public void setId(String id) {
         this.id = id;
     }
