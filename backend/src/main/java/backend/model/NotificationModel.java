@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 //This class represents a notification document in the MongoDB "notifications" collection
 public class NotificationModel {
+    // Unique identifier for the notification (automatically generated)
     @Id
     @GeneratedValue
     private String id;
