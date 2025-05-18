@@ -34,6 +34,7 @@ public class LearningProgressController {
                 .orElseThrow(() -> new LearningProgressNotFoundException(id));
     }
 
+    // update learning progress
     @PutMapping("/learningProgress/{id}")
     LearningProgressModel update(@RequestBody LearningProgressModel newLearningProgressModel, @PathVariable String id) {
         return learningProgressRepository.findById(id)
