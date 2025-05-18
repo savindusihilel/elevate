@@ -111,6 +111,7 @@
   transform: translateY(-2px);
 }
 
+/* submit button */
 .pro-submit-btn:active {
   transform: translateY(0);
 }
