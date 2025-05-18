@@ -29,7 +29,7 @@ function NotificationsPage() {
       console.error('User ID is not available');
     }
   }, [userId]);
-
+// Handler to mark a specific notification as read
   const handleMarkAsRead = async (id) => {
     try {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
