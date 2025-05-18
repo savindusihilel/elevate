@@ -6,9 +6,12 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaBell } from "react-icons/fa";
 import NavBar from '../../Components/NavBar/NavBar';
 function NotificationsPage() {
+  // State to hold all notifications for the logged-in user
   const [notifications, setNotifications] = useState([]);
+  // Fetch user ID from local storage (should be set during login)
   const userId = localStorage.getItem('userID');
 
+  // Fetch notifications from the backend when the component mounts or userId changes
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
