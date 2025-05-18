@@ -8,18 +8,20 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// rest controller
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class LearningProgressController {
     @Autowired
     private LearningProgressRepository learningProgressRepository;
 
-    //Insert
+    // Insert
     @PostMapping("/learningProgress")
     public LearningProgressModel newLearningProgressModel(@RequestBody LearningProgressModel newLearningProgressModel) {
         return learningProgressRepository.save(newLearningProgressModel);
     }
 
+    // fetch all learning progress
     @GetMapping("/learningProgress")
     List<LearningProgressModel> getAll() {
         return learningProgressRepository.findAll();
