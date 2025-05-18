@@ -101,7 +101,7 @@ function NotificationsPage() {
       </div>
     </div>
     </div>
-  
+  );
 
 
 }
