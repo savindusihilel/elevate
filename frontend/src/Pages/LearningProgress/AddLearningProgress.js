@@ -70,6 +70,7 @@ function AddLearningProgress() {
     setSkills([...skills, '']);
   };
 
+  //handle skill change
   const handleSkillChange = (index, value) => {
     const updatedSkills = [...skills];
     updatedSkills[index] = value;
