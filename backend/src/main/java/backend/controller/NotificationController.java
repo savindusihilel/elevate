@@ -25,7 +25,7 @@ public class NotificationController {
     public List<NotificationModel> getNotifications(@PathVariable String userId) {
         return notificationRepository.findByUserId(userId);
     }
-//mark the notification with given as read
+
     @PutMapping("/{id}/markAsRead")
     public ResponseEntity<?> markAsRead(@PathVariable String id) {
         return notificationRepository.findById(id).map(notification -> {
@@ -36,7 +36,7 @@ public class NotificationController {
     }
 //Delete a notification
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteNotification(@PathVariable String id) {
+    public ResponseEntity<?> deleteNotification(@PathVariable String id) {s
         if (notificationRepository.existsById(id)) {
             notificationRepository.deleteById(id);
             return ResponseEntity.ok("Notification deleted");
