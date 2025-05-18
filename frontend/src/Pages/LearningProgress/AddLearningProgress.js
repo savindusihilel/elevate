@@ -62,6 +62,8 @@ function AddLearningProgress() {
       console.error('Error:', error);
     }
   };
+
+  //handle add skill
   const handleAddSkill = () => {
     if (skills.includes('')) {
       alert('Please fill the current skill before adding a new one.');
@@ -70,11 +72,13 @@ function AddLearningProgress() {
     setSkills([...skills, '']);
   };
 
+  //handle skill change
   const handleSkillChange = (index, value) => {
     const updatedSkills = [...skills];
     updatedSkills[index] = value;
     setSkills(updatedSkills);
   };
+  // handle delete skill
   const handleDeleteSkill = (index) => {
     const updatedSkills = skills.filter((_, i) => i !== index);
     setSkills(updatedSkills);
@@ -161,3 +165,8 @@ function AddLearningProgress() {
 }
 
 export default AddLearningProgress;
+
+
+
+//Add Learning Plan modified
+
