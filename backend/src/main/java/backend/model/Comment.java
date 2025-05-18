@@ -1,5 +1,5 @@
 package backend.model;
-
+//// Represents a user comment in the system (e.g., for a post or notification)
 public class Comment {
     private String id;
     private String userID;
