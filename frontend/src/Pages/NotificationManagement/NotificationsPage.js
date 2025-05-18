@@ -55,7 +55,8 @@ function NotificationsPage() {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
-      <div>
+  return (
+    <div>
       <NavBar/>
     <div className="noty-container">
       <div className="noty-header">
