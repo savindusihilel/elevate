@@ -56,7 +56,7 @@ function NotificationsPage() {
   };
 
   return (
-    
+    <div>
       <NavBar/>
     <div className="noty-container">
       <div className="noty-header">
