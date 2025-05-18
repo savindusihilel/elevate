@@ -1,3 +1,4 @@
+//This class is a plain Java object used to model a comment
 package backend.model;
 //// Represents a user comment in the system (e.g., for a post or notification)
 public class Comment {
