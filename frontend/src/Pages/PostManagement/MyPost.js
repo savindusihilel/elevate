@@ -8,6 +8,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 //
+//
 
 function MyPost() {
     const [posts, setPosts] = useState([]);
@@ -164,3 +165,6 @@ function MyPost() {
 }
 
 export default MyPost
+
+//
+//
