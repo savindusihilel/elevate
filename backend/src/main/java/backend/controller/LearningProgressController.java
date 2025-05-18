@@ -27,6 +27,7 @@ public class LearningProgressController {
         return learningProgressRepository.findAll();
     }
 
+    // fetch specific learnng progress
     @GetMapping("/learningProgress/{id}")
     LearningProgressModel getById(@PathVariable String id) {
         return learningProgressRepository.findById(id)
