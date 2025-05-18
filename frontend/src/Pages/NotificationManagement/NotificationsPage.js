@@ -97,6 +97,6 @@ function NotificationsPage() {
     </div>
     </div>
   );
-}
+
 
 export default NotificationsPage;
