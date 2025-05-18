@@ -35,7 +35,7 @@ public class Comment {
     public String getContent() {
         return content;
     }
-
+ // Setter for comment content
     public void setContent(String content) {
         this.content = content;
     }
