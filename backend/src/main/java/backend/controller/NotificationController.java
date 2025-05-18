@@ -11,17 +11,21 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
+//Indicates this class handles REST API requests and responses (usually returns JSON).
 @RequestMapping("/notifications")
 @CrossOrigin("http://localhost:3000")
+
+//Notification contrioller
 public class NotificationController {
     @Autowired
+    //Injects the NotificationRepository, which is used to interact with the database
     private NotificationRepository notificationRepository;
-
+//Get user Details
     @GetMapping("/{userId}")
     public List<NotificationModel> getNotifications(@PathVariable String userId) {
         return notificationRepository.findByUserId(userId);
     }
-
+//mark the notification with given as read
     @PutMapping("/{id}/markAsRead")
     public ResponseEntity<?> markAsRead(@PathVariable String id) {
         return notificationRepository.findById(id).map(notification -> {
@@ -30,7 +34,7 @@ public class NotificationController {
             return ResponseEntity.ok("Notification marked as read");
         }).orElse(ResponseEntity.notFound().build());
     }
-
+//Delete a notification
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteNotification(@PathVariable String id) {
         if (notificationRepository.existsById(id)) {
