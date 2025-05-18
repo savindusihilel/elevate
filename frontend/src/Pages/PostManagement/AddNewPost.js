@@ -3,6 +3,9 @@ import axios from 'axios';
 import './post.css'
 import NavBar from '../../Components/NavBar/NavBar'
 function AddNewPost() {
+
+
+  // Add a title
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [media, setMedia] = useState([]);
