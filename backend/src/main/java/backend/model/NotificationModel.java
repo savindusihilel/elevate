@@ -11,12 +11,13 @@ public class NotificationModel {
     // Unique identifier for the notification (automatically generated)
     @Id
     @GeneratedValue
-    private String id;
+    private String id;  
     private String userId;
     private String message; 
     private boolean read; 
     private String createdAt; 
 
+    // Default constructor required by Spring and MongoDB
     public NotificationModel() {}
 
     public NotificationModel(String userId, String message, boolean read, String createdAt) {
