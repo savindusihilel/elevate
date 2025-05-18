@@ -20,21 +20,22 @@ public class NotificationModel {
     // Default constructor required by Spring and MongoDB
     public NotificationModel() {}
 
+   // Constructor to initialize a notification with all fields (except ID)
     public NotificationModel(String userId, String message, boolean read, String createdAt) {
         this.userId = userId;
         this.message = message;
         this.read = read;
         this.createdAt = createdAt;
     }
-
+    // Getter for ID
     public String getId() {
         return id;
     }
-
+    // Setter for ID
     public void setId(String id) {
         this.id = id;
     }
-
+     // Getter for user ID
     public String getUserId() {
         return userId;
     }
