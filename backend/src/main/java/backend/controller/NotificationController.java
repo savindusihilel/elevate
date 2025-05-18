@@ -1,3 +1,4 @@
+//It uses a NotificationRepository to talk to the database, and is designed to work with frontend
 package backend.controller;
 
 import backend.model.NotificationModel;
