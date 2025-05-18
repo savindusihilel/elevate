@@ -4,6 +4,9 @@ import axios from 'axios';
 import { FaTrash } from 'react-icons/fa';
 import NavBar from '../../Components/NavBar/NavBar';
 
+//
+
+
 function UpdatePost() {
   const { id } = useParams();
   const navigate = useNavigate();
