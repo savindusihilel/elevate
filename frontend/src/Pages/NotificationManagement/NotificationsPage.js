@@ -24,7 +24,7 @@ function NotificationsPage() {
     };
 
     if (userId) {
-      fetchNotifications();
+      fetchNotifications();// Only fetch if userId exists
     } else {
       console.error('User ID is not available');
     }
