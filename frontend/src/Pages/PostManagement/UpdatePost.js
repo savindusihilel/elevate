@@ -7,7 +7,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 //
 //
 //
-
+//
 
 
 function UpdatePost() {
