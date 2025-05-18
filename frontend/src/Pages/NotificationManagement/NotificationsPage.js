@@ -6,8 +6,13 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaBell } from "react-icons/fa";
 import NavBar from '../../Components/NavBar/NavBar';
 function NotificationsPage() {
+  
+  // State to hold all notifications for the logged-in user
   const [notifications, setNotifications] = useState([]);
+  // Fetch user ID from local storage (should be set during login)
   const userId = localStorage.getItem('userID');
+
+  // Fetch notifications from the backend when the component mounts or userId changes
 
   useEffect(() => {
     const fetchNotifications = async () => {
@@ -21,29 +26,37 @@ function NotificationsPage() {
     };
 
     if (userId) {
-      fetchNotifications();
+      fetchNotifications();// Only fetch if userId exists
     } else {
       console.error('User ID is not available');
     }
   }, [userId]);
 
+// Handler to mark a specific notification as read
   const handleMarkAsRead = async (id) => {
     try {
       await axios.put(`http://localhost:8080/notifications/${id}/markAsRead`);
+      // Update local state to reflect that this notification is now read
+
       setNotifications(notifications.map((n) => (n.id === id ? { ...n, read: true } : n)));
     } catch (error) {
       console.error('Error marking notification as read:', error);
     }
   };
 
+  // Handler to delete a specific notification
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:8080/notifications/${id}`);
+      // Remove the deleted notification from state
+
       setNotifications(notifications.filter((n) => n.id !== id));
     } catch (error) {
       console.error('Error deleting notification:', error);
     }
   };
+
+// Utility function to format date strings nicely
 
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
@@ -97,9 +110,9 @@ function NotificationsPage() {
     </div>
     </div>
   );
+
+
 }
 
 export default NotificationsPage;
 
-
-//////////////////////////////
