@@ -21,6 +21,7 @@ function AddNewPost() {
     const previews = [];
 
     // Add media 
+    //Add component
   
 
     for (const file of files) {
