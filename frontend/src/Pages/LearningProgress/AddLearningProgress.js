@@ -76,6 +76,7 @@ function AddLearningProgress() {
     updatedSkills[index] = value;
     setSkills(updatedSkills);
   };
+  // handle delete skill
   const handleDeleteSkill = (index) => {
     const updatedSkills = skills.filter((_, i) => i !== index);
     setSkills(updatedSkills);
