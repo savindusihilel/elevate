@@ -22,6 +22,7 @@ function AddNewPost() {
 
     // Add media 
     //Add component
+    //Add more component
   
 
     for (const file of files) {
