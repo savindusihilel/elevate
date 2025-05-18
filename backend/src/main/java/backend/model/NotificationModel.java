@@ -5,6 +5,8 @@ import jakarta.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "notifications")
+
+//This class represents a notification document in the MongoDB "notifications" collection
 public class NotificationModel {
     @Id
     @GeneratedValue
