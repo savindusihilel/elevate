@@ -21,6 +21,7 @@ function AddNewPost() {
     const previews = [];
 
     // Add media 
+    //
 
     for (const file of files) {
       if (file.size > maxFileSize) {
