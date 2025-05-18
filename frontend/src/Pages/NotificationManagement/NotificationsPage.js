@@ -39,10 +39,11 @@ function NotificationsPage() {
       console.error('Error marking notification as read:', error);
     }
   };
-
+  // Handler to delete a specific notification
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:8080/notifications/${id}`);
+      // Remove the deleted notification from state
       setNotifications(notifications.filter((n) => n.id !== id));
     } catch (error) {
       console.error('Error deleting notification:', error);
