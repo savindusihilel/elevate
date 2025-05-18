@@ -73,7 +73,14 @@
   align-items: center;
 }
 
-
+.noty-read-btn {
+  color: #0f6fb2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
 
 .noty-delete-btn {
   color: #dc2626;
