@@ -15,23 +15,23 @@ public class Comment {
     public void setId(String id) {
         this.id = id;
     }
-
+// Getter for user ID
     public String getUserID() {
         return userID;
     }
-
+ // Setter for user ID
     public void setUserID(String userID) {
         this.userID = userID;
     }
-
+ // Getter for user's full name
     public String getUserFullName() {
         return userFullName;
     }
-
+// Setter for user's full name
     public void setUserFullName(String userFullName) {
         this.userFullName = userFullName;
     }
-
+// Getter for comment content
     public String getContent() {
         return content;
     }
