@@ -3,6 +3,9 @@ import axios from 'axios';
 import './post.css'
 import NavBar from '../../Components/NavBar/NavBar'
 function AddNewPost() {
+
+
+  // Add a title
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [media, setMedia] = useState([]);
@@ -16,6 +19,11 @@ function AddNewPost() {
     let imageCount = 0;
     let videoCount = 0;
     const previews = [];
+
+    // Add media 
+    //Add component
+    //Add more component
+  
 
     for (const file of files) {
       if (file.size > maxFileSize) {
