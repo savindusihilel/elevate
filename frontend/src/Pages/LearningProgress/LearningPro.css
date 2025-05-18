@@ -144,6 +144,7 @@
   justify-content: space-between;
 }
 
+/*progress header*/
 .progress-header h1 {
   color: #0052cc;
   font-size: 2rem;
